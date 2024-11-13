@@ -1,0 +1,143 @@
+/* ============ CUSTOM PROPERTIES ============ */
+:root {
+    --black-000: #0d1117;
+    --white-000: #f5f5f5;
+    --gray-500: #8892b0;
+    --blue-600: #1e90ff;
+    --pink-600: #ff6b81;
+    --purple-600: #9b59b6;
+    --fs-xxxl: 6rem;
+    --fs-xl: 3.2rem;
+}
+
+/* Hero Block Styles */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10% 4% 10%;
+    text-align: center;
+    background-image: linear-gradient(135deg, #4e54c8, #8f94fb);
+    position: relative;
+    color: var(--white-000);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    header {
+        min-height: 90vh;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        min-height: 600px;
+    }
+}
+
+/* Hero Text Styling */
+.hero-text-container h1,
+.hero-text-container h2 {
+    line-height: 1.2;
+    color: var(--white-000);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-text-container h1 {
+    margin-bottom: 20px;
+    font-size: calc(var(--fs-xxxl) * 1.4);
+    letter-spacing: -2px;
+    animation: fade-in 1.2s ease-in-out both;
+}
+
+.hero-text-container h2 {
+    font-weight: 300;
+    font-size: calc(var(--fs-xl) * 1.2);
+    text-transform: uppercase;
+    color: var(--pink-600);
+    animation: fade-in 1.5s ease-in-out both;
+}
+
+/* Animations */
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide-in-top {
+    animation: slide-in-top 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Hero Background Media */
+.hero-bg-media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-bg-media img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+    opacity: 0.8;
+}
+
+/* Background Overlay */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+    mix-blend-mode: multiply;
+}
+
+/* Enhancements */
+.hero-text-container {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+}
+
+.hero-text-container h1:hover {
+    color: var(--purple-600);
+    transition: color 0.3s ease;
+}

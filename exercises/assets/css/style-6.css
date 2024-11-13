@@ -1,0 +1,174 @@
+/* ============= WEB BROWSER RESETS ============ */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+@media (max-width: 767px) {
+    body {
+        text-rendering: optimizeSpeed;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        text-rendering: optimizeLegibility;
+    }
+}
+
+/* ============ CUSTOM PROPERTIES ============ */
+:root {
+    --black-000: #000000;
+    --white-000: #ffffff;
+    --purple-500: purple;
+    --yellowgreen-500: yellowgreen;
+    --sandybrown-500: sandybrown;
+    --teal-500: teal;
+    --blue-500: blue;
+    --pink-500: pink;
+    --navajowhite-500: navajowhite;
+}
+
+/* ================= ENDS ================ */
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--white-000);
+}
+
+@media (min-width: 1025px) {
+    header {
+        padding: 3% 22% 5% 22%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 5% 20%;
+    }
+}
+@media (max-width: 767px) {
+    header {
+        padding: 32px 9%;
+    }
+}
+
+header *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Main Heading */
+h1 {
+    font-weight: bold;
+    font-size: 84px;
+    color: var(--black-000);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+/* Small Headings */
+h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: var(--purple-500);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 42px;
+}
+
+/* SECTIONS */
+section {
+    background-color: var(--pink-500);
+    padding: 40px 10%;
+    margin-bottom: 32px;
+    border-radius: 8px;
+}
+
+section img {
+    max-width: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Custom Sections */
+.watermelon {
+    background-color: var(--blue-500);
+    text-align: center;
+}
+.watermelon h3 {
+    color: var(--navajowhite-500);
+    margin-bottom: 12px;
+}
+
+.apple {
+    background-color: var(--yellowgreen-500);
+    text-align: center;
+}
+.apple h3 {
+    color: var(--black-000);
+}
+
+.blueberry {
+    background-color: var(--sandybrown-500);
+    text-align: center;
+}
+.blueberry h3,
+.blueberry p {
+    color: var(--black-000);
+}
+
+.lemon {
+    background-color: var(--teal-500);
+    text-align: center;
+}
+.lemon h3 {
+    color: var(--purple-500);
+}
+
+/* Smaller Headings */
+h3 {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+/* Text Paragraphs */
+p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+    color: var(--black-000);
+}

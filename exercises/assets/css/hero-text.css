@@ -1,0 +1,114 @@
+/* ============= WEB BROWSER RESETS ============ */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: #f0f2f5;
+}
+@media (max-width: 767px) {
+    body {
+        text-rendering: optimizeSpeed;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        text-rendering: optimizeLegibility;
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* ============= HERO BLOCK STYLING ============ */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+    text-align: center;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive height for the hero block */
+@media (min-width: 768px) {
+    header {
+        min-height: 85vh;
+    }
+}
+@media (max-width: 767px) {
+    header {
+        min-height: 500px;
+    }
+}
+
+/* Hero Text Styling */
+.hero-text-container h1,
+.hero-text-container h2 {
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text-container h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    letter-spacing: -2px;
+    animation: fade-in 1.2s ease-in-out both;
+}
+
+.hero-text-container h2 {
+    font-weight: 300;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #ecf0f1;
+    animation: fade-in 1.5s ease-in-out both;
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect */
+.hero-text-container h1:hover {
+    color: #f39c12;
+    transition: color 0.3s ease;
+}
+
+/* Media Queries for Text Size */
+@media (max-width: 480px) {
+    .hero-text-container h1 {
+        font-size: 36px;
+    }
+    .hero-text-container h2 {
+        font-size: 24px;
+    }
+}
